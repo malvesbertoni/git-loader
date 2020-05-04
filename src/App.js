@@ -1,11 +1,14 @@
+// Imports
 import React, { useState, useEffect } from 'react';
 
 import './styles.css';
 
 export default function App() {
-  const [repositories, setRepositories]= useState([]);
-  const [username, setUsername] = useState(["malvesbertoni"]);
+  const [repositories, setRepositories]= useState([]); // will be used to load the user's repositories
+  const [username, setUsername] = useState(["malvesbertoni"]); // will receive the username from the input, but starts with mine
 
+  // consumes the github's api of the username input
+  // if the username changes, it reloads
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(`https://api.github.com/users/${username}/repos`);
@@ -15,12 +18,14 @@ export default function App() {
     } fetchData()
   }, [username]);
 
+  // shows on the page's title how many repos the user favorited
   useEffect(() => {
     const filtered = repositories.filter(repo => repo.favorite);
 
     document.title = `You have ${filtered.length} favorite repos`;
   }, [repositories]);
 
+  // adds a 'favorite' tag to the repo
   function handleFavorite(id) {
     const newRepositories = repositories.map(repo => {
       return repo.id === id ? {... repo, favorite: !repo.favorite} : repo
