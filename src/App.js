@@ -13,7 +13,7 @@ export default function App() {
 
       setRepositories(data);
     } fetchData()
-  }, []);
+  }, [username]);
 
   useEffect(() => {
     const filtered = repositories.filter(repo => repo.favorite);
