@@ -9,6 +9,8 @@ body {
     display: flex;
     flex-direction: column;
 
+    margin-top: 40px;
+
     align-items: center;
     justify-content: center;
 }
@@ -27,7 +29,7 @@ body {
     box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
-.content-container {
+.content {
     font-family: 'Dosis', sans-serif;
 
     display: flex;
@@ -39,8 +41,9 @@ body {
     margin-top: 52px;
 }
 
-.content-container p {
+.content p {
     font-weight: 600;
+    border-bottom: 2px solid rgba(0,0,0,0.25);
 }
 
 

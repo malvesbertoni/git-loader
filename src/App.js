@@ -1,7 +1,7 @@
 // Imports
 import React, { useState, useEffect } from 'react';
 
-import './styles.css';
+import styles from './App.module.css';
 
 export default function App() {
   const [repositories, setRepositories]= useState([]); // will be used to load the user's repositories
@@ -35,20 +35,20 @@ export default function App() {
   }
 
   return (
-    <div className="main-container">
-      <div className="header">
+    <div className={styles.container}>
+      <div className={styles.header}>
         <h1>GIT LOADER</h1>
-        <input type="text" className="input" name="username" placeholder="Type in a github username"
+        <input type="text" className={styles.input} name="username" placeholder="Type in a github username"
             onChange={e => setUsername(e.target.value)} />
       </div>
-      <div className="content-container">
+      <div className={styles.content}>
         <p>Showing {username}'s repositories</p>
         <ul>
             {repositories.map(repo => (
               <li key={repo.id}>
                 { repo.name }
-                { repo.favorite && <span className="favoriteTag"> (FAVORITE!) </span>}
-                <button className="favoriteButton" onClick={() => handleFavorite(repo.id)}> Favorite this repo </button>
+                { repo.favorite && <span className={styles.favoriteTag}> (FAVORITE!) </span>}
+                <button className={styles.favoriteButton} onClick={() => handleFavorite(repo.id)}> Favorite this repo </button>
               </li>
             ))}
         </ul>
