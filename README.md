@@ -1,6 +1,6 @@
 # GIT LOADER
 
-Given a github username, this app consume the github's API to load all of this user's repositories.
+Given a github username, this app fetches the github's API to load all of this user's repositories and show them on screen.
 
 It was designed with the goal to better comprehend React Hooks.
 
@@ -9,3 +9,8 @@ It was designed with the goal to better comprehend React Hooks.
 * CSS
 
 ## Demo
+#### Functionality
+![Usage](https://github.com/malvesbertoni/git-loader/blob/master/public/functionalityGif.gif)
+
+#### Responsive
+![Responsive](https://github.com/malvesbertoni/git-loader/blob/master/public/responsiveGif.gif)
