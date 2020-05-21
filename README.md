@@ -9,7 +9,7 @@ It was designed with the goal to better comprehend React Hooks.
 * CSS
 
 ## Demo
-### Functionality
+### Overview
 ![Usage](https://github.com/malvesbertoni/git-loader/blob/master/public/functionalityGif.gif)
 
 ### Responsive
